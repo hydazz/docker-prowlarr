@@ -7,7 +7,7 @@ LABEL build_version="Prowlarr version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="hydaz"
 
 # environment settings
-ARG BRANCH
+ARG BRANCH=develop
 
 RUN set -xe && \
 	echo "**** install build packages ****" && \
@@ -23,7 +23,7 @@ RUN set -xe && \
 	fi && \
 	echo "**** install prowlarr ****" && \
 	if [ -z ${VERSION} ]; then \
-		VERSION=$(curl -sL "https://prowlarr.servarr.com/v1/update/${BRANCH}/changes?os=linuxmusl" | jq -r '.[0].version'); \
+		VERSION=$(curl -sL "https://prowlarr.servarr.com/v1/update/${BRANCH}/changes?os=linuxmusl&runtime=netcore" | jq -r '.[0].version'); \
 	fi && \
 	mkdir -p /app/prowlarr/bin && \
 	curl -o \
@@ -37,12 +37,12 @@ RUN set -xe && \
 	apk del --purge \
 		build-dependencies && \
 	rm -rf \
-		/app/prowlarr/bin/Prowlarr.Update \
+		/app/prowlarr/bin/prowlarr.Update \
 		/tmp/*
 
 # copy local files
 COPY root/ /
 
 # ports and volumes
-EXPOSE 7878
+EXPOSE 9696
 VOLUME /config
