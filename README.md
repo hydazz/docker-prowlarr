@@ -1,10 +1,10 @@
 ## docker-prowlarr
 
-[![docker hub](https://img.shields.io/badge/docker_hub-link-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/vcxpz/prowlarr) ![docker image size](https://img.shields.io/docker/image-size/vcxpz/prowlarr?style=for-the-badge&logo=docker) [![auto build](https://img.shields.io/badge/docker_builds-automated-blue?style=for-the-badge&logo=docker?color=d1aa67)](https://github.com/hydazz/docker-prowlarr/actions?query=workflow%3A"Auto+Builder+CI") [![codacy branch grade](https://img.shields.io/codacy/grade/f0bc44e57131401490bc22ca08aa8629/main?style=for-the-badge&logo=codacy)](https://app.codacy.com/gh/hydazz/docker-prowlarr)
+[![docker hub](https://img.shields.io/badge/docker_hub-link-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/vcxpz/prowlarr) ![docker image size](https://img.shields.io/docker/image-size/vcxpz/prowlarr?style=for-the-badge&logo=docker) [![auto build](https://img.shields.io/badge/docker_builds-automated-blue?style=for-the-badge&logo=docker?color=d1aa67)](https://github.com/hydazz/docker-prowlarr/actions?query=workflow%3A"Auto+Builder+CI")
 
-Fork of [linuxserver/docker-prowlarr](https://github.com/linuxserver/docker-prowlarr/) (Equivalent to develop-3.2.1.5070-ls21)
+Fork of [linuxserver/docker-prowlarr](https://github.com/linuxserver/docker-prowlarr/) (Equivalent to nightly-0.1.0.816-ls118)
 
-[Prowlarr](https://prowlarr.video/) - A fork of Sonarr to work with movies à la Couchpotato.
+[Prowlarr](https://github.com/Prowlarr/Prowlarr) is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
 
 ## Usage
 
@@ -15,10 +15,8 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Australia/Melbourne \
   -e DEBUG=true/false #optional \
-  -p 7878:7878 \
+  -p 9696:9696 \
   -v <path to appdata>:/config \
-  -v <path to movies>:/movies \
-  -v <path to downloads>:/downloads \
   --restart unless-stopped \
   vcxpz/prowlarr
 ```
