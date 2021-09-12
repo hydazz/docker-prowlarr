@@ -12,7 +12,6 @@ ARG BRANCH=develop
 RUN set -xe && \
 	echo "**** install build packages ****" && \
 	apk add --no-cache --virtual=build-dependencies \
-		curl \
 		jq && \
 	if [ "$(arch)" = "x86_64" ]; then \
 		ARCH="x64"; \
