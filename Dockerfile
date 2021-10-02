@@ -36,7 +36,7 @@ RUN set -xe && \
 	apk del --purge \
 		build-dependencies && \
 	rm -rf \
-		/app/prowlarr/bin/prowlarr.Update \
+		/app/prowlarr/bin/Prowlarr.Update \
 		/tmp/*
 
 # copy local files
