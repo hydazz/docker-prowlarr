@@ -7,7 +7,7 @@ LABEL build_version="Prowlarr version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="hydaz"
 
 # environment settings
-ARG BRANCH=develop
+ARG BRANCH=nightly
 
 RUN set -xe && \
 	echo "**** install build packages ****" && \
