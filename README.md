@@ -2,7 +2,7 @@
 
 [![docker hub](https://img.shields.io/badge/docker_hub-link-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/vcxpz/prowlarr) ![docker image size](https://img.shields.io/docker/image-size/vcxpz/prowlarr?style=for-the-badge&logo=docker) [![auto build](https://img.shields.io/badge/docker_builds-automated-blue?style=for-the-badge&logo=docker?color=d1aa67)](https://github.com/hydazz/docker-prowlarr/actions?query=workflow%3A"Auto+Builder+CI")
 
-Fork of [linuxserver/docker-prowlarr](https://github.com/linuxserver/docker-prowlarr/) (Equivalent to nightly-0.1.1.875-ls132)
+Fork of [linuxserver/docker-prowlarr](https://github.com/linuxserver/docker-prowlarr/) (Equivalent to nightly-0.1.4.1150-ls198)
 
 [Prowlarr](https://github.com/Prowlarr/Prowlarr) is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
 
@@ -34,10 +34,6 @@ docker run -d \
 ## Upgrading Prowlarr
 
 To upgrade, all you have to do is pull the latest Docker image. We automatically check for Prowlarr updates every hour. When a new version is released, we build and publish an image both as a version tag and on `:latest`.
-
-## Credits
-
--   [hotio](https://github.com/hotio) for the `redirect_cmd` function
 
 ## Fixing Appdata Permissions
 
