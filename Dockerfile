@@ -13,8 +13,8 @@ ENV XDG_CONFIG_HOME="/config/xdg"
 RUN \
 	echo "**** install packages ****" && \
 	apk add -U --upgrade --no-cache \
-		jq \
 		icu-libs \
+		jq \
 		sqlite-libs && \
 	echo "**** install prowlarr ****" && \
 	mkdir -p /app/prowlarr/bin && \
